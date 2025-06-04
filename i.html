@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salom Sayti</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    #natija {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Salom beruvchi sayt</h1>
+  <p>Ismingizni kiriting:</p>
+  <input type="text" id="ism" placeholder="Ismingiz">
+  <br>
+  <button onclick="salomBer()">Salom berish</button>
+
+  <div id="natija"></div>
+
+  <script>
+    function salomBer() {
+      let ism = document.getElementById("ism").value;
+      let natija = document.getElementById("natija");
+
+      if (ism.trim() === "") {
+        natija.innerText = "Iltimos, ismingizni kiriting.";
+      } else {
+        natija.innerText = "Salom, " + ism + "!";
+      }
+    }
+  </script>
+
+</body>
+</html>
